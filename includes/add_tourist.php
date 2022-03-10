@@ -30,21 +30,21 @@ if (isset($_POST['book'])) {
   $user_img = $_FILES['user_img']['name'];
   $ex_user_img = pathinfo($user_img, PATHINFO_EXTENSION);
   $randomno1 = rand(0, 100000);
-  $rename1 = substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyz"), 0, 8);
+  $rename1 = $fname.substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyz"), 0, 8);
   $newImage = $rename1 . '.' . $ex_user_img;
 
   //VALID ID
   $valid_id = $_FILES['valid_id']['name'];
   $ex_valid_id = pathinfo($valid_id, PATHINFO_EXTENSION);
   $randomno2 = rand(0, 100000);
-  $rename2 = substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyz"), 0, 8);
+  $rename2 = $fname.substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyz"), 0, 8);
   $newId = $rename2 . '.' . $ex_valid_id;
 
   //Vaccination Card
   $vac = $_FILES['vac']['name'];
   $ex_vac = pathinfo($vac, PATHINFO_EXTENSION);
   $randomno3 = rand(0, 100000);
-  $rename3 = substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyz"), 0, 8);
+  $rename3 = $fname.substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyz"), 0, 8);
   $newVac = $rename3 . '.' . $ex_vac;
 
   ########################## COMPANIONS VARIABLE ##########################
@@ -117,19 +117,19 @@ VALUES ('$newImage', '$newId','$newVac', '$bookers_id')";
         $com_user_img =  $_FILES[$i . 'com_user_img']['name'];
         $ext_com_img = pathinfo($com_user_img, PATHINFO_EXTENSION);
         $com_randomno1 = rand(0, 100000);
-        $com_rename1 = substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyz"), 0, 8);
+        $com_rename1 = $fname.substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyz"), 0, 8);
         $com_newImage = $com_rename1 . '.' . $ext_com_img;
         //COMPANIONS VALID ID
         $com_valid_id =  $_FILES[$i . 'com_valid_id']['name'];
         $ext_com_id = pathinfo($com_valid_id, PATHINFO_EXTENSION);
         $com_randomno2 = rand(0, 100000);
-        $com_rename2 = substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyz"), 0, 8);
+        $com_rename2 = $fname.substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyz"), 0, 8);
         $com_newId = $com_rename2 . '.' . $ext_com_id;
         //COMPANION VACCINATION CARD
         $com_vac =  $_FILES[$i . 'com_vac']['name'];
         $ext_com_vac = pathinfo($com_vac, PATHINFO_EXTENSION);
         $com_randomno3 = rand(0, 100000);
-        $com_rename3 = substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyz"), 0, 8);
+        $com_rename3 = $fname.substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyz"), 0, 8);
         $com_newVac = $com_rename3 . '.' . $ext_com_vac;
 
 

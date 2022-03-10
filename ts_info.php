@@ -33,6 +33,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
     <title>TRAVELHOLIC: Online Tourist Booking</title>
+    <script src="js/adapter.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/instascan.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/bootstrap.grid.min.css">

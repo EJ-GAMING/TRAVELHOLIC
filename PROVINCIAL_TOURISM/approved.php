@@ -12,7 +12,7 @@ include_once 'includes/REQUEST/request.php';
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>TRAVELHOLIC: Online Tourbooking</title>
-        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/dataTables.bootstrap5.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/bootstrap.css"/>
         <link href="css/styles.css" rel="stylesheet" />
         
@@ -86,7 +86,10 @@ while($approved = mysqli_fetch_assoc($approved_result)){
 <a  class="btn btn-danger btn-sm btn-flat text-white" data-bs-toggle="modal" data-bs-target="#del<?php echo $approved['pktourist_id']; ?>" >
 <i class="fas fa-times me-1"></i>Delete</a>
 </td>
+
+
 </tr>
+</a>
 
   <!-- Modal TOURIST_DELETE -->
   <div class="modal fade" id="del<?php echo $approved['pktourist_id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -1,4 +1,6 @@
-
+<script src="js/adapter.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/instascan.min.js"></script>
 <div class="modal fade" id="rate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -13,8 +15,16 @@
               <div class="col-md-12">
               <input type="hidden" name="tsinfo_id" class="form-control" value="<?php echo $row['tsinfo_id'];?>">
                   <input type="hidden" name="tsm_id" class="form-control" value="<?php echo $row['tsm_id'];?>">
-                  <label class="h4">Booking ID</label>
-                  <input type="text" name="book_id" id="" class="form-control" placeholder="Enter Your Booking Number">
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-md-12">
+                        <label class="h3 d-flex justify-content-center">Please Scan Your QR Code to Generate your Booking ID</label>
+                        <center><video id="preview" width="60%" class="bg-dark"></video></center>
+                    </div>
+                    <div class="col-md-6">
+                    <input type="text" name="book_id" id="qrcode" class="form-control" placeholder="Booking ID"  required>
+                    </div>
+                </div>
+
               </div>
           </div>
           <div class="row">
@@ -46,3 +56,25 @@
     </div>
   </div>
 </div>
+    <script type="text/javascript">
+        let scanner = new Instascan.Scanner({
+            video: document.getElementById("preview")
+        });
+
+        Instascan.Camera.getCameras().then(function(cameras) {
+            if (cameras.legth = 1) {
+                scanner.start(cameras[0]);
+            } else {
+                alert('No Cameras Found');
+            }
+        }).catch(function(e) {
+            console.error(e);
+        });
+
+
+        scanner.addListener('scan', function(c) {
+            document.getElementById('qrcode').value = c;
+      
+
+        });
+    </script>

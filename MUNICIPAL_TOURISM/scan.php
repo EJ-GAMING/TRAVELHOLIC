@@ -45,11 +45,7 @@
                         <center><video id="preview" width="60%" class="bg-dark"></video></center>
                         <form action="includes/QRCODE/scan_qrcode.php" method="post">
                             <input type="hidden" name="qrcode" id="qrcode" placeholder="Your QRCODE">
-
                         </form>
-
-
-
                     </div>
                 </div>
 
@@ -119,7 +115,7 @@
 
 
         scanner.addListener('scan', function(c) {
-            document.getElementById('qrcode').value = c; 
+            document.getElementById('qrcode').value = c;
             document.forms[0].submit();
 
         });

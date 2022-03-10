@@ -12,7 +12,7 @@ include_once 'includes/REQUEST/request.php';
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>TRAVELHOLIC: Online Tourbooking</title>
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+   <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <?php include_once 'disable_right_click.php'; ?>
