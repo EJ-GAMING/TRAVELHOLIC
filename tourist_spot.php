@@ -1,3 +1,7 @@
+<?php
+    $ratings = [];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,8 +63,8 @@
         <div class="col-md-12">
 
             <?php
-                include_once 'includes/connection.php';
-                $select = "SELECT *
+            include_once 'includes/connection.php';
+            $select = "SELECT *
                 FROM tbl_ts_manager
                 INNER JOIN tbl_tsm_info ON tbl_ts_manager.tsm_id = tbl_tsm_info.tsm_id
                 INNER JOIN tbl_tsm_address ON tbl_ts_manager.tsm_id = tbl_tsm_address.tsm_id
@@ -71,7 +75,7 @@
                 INNER JOIN tbl_ts_img ON tbl_ts_info.tsinfo_id = tbl_ts_img.tsinfo_id
                 ORDER BY tbl_ts_info.tsinfo_id DESC";
 
-                $select_result = mysqli_query($conn, $select);
+            $select_result = mysqli_query($conn, $select);
 
             ?>
             <div class="row mb-5">
@@ -113,27 +117,15 @@
                 FROM tbl_rating 
                 WHERE tsm_id = '$tsm_id'");
                                     while ($row = mysqli_fetch_assoc($query)) {
+                                        $el = $row['rating_id'];
                                         $average = $row['average'];
-
+                                        $ratings[] = [
+                                            "average"=>$average,
+                                            "element"=> ".rateYo-$el"
+                                        ];
                                     ?>
 
                                         <div class="rateYo-<?php echo $row['rating_id']; ?>"></div>
-
-                                        <script src="js/jquery.min.js"></script>
-                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.4/jquery.rateyo.min.js"></script>
-                                        <script>
-                                            $(function() {
-                                                $(".rateYo-<?php echo $row['rating_id']; ?>").rateYo({
-                                                    readOnly: true,
-                                                    rating: <?php echo $average; ?>,
-                                                });
-                                            });
-                                        </script>
-
-
-
-
-
                                     </div>
                                     <div class="col-md-12 h4">
                                         <?php echo $average ?> / 5(<?php echo $row['rate']; ?>)
@@ -172,10 +164,28 @@
     </div>
 
     <?php include_once 'footer.php'; ?>
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.4/jquery.rateyo.min.js"></script>
+    <script>
+        $(function() {
+            <?php
+                foreach ($ratings as $rating) {
+            ?>
+                $("<?= $rating["element"]; ?>").rateYo({
+                    readOnly: true,
+                    rating: <?= $rating["average"] ?? 0 ?>,
+                });
+
+            <?php } ?>
+        });
+    </script>
     <script>
         $(document).ready(function() {
             $("#search").keyup(function() {
