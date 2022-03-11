@@ -1,5 +1,5 @@
 <?php
- include_once 'connection.php';
+ include_once 'DB/connection.php';
 
 
         if (isset($_POST['query'])) {

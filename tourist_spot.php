@@ -1,5 +1,5 @@
 <?php
-require_once "includes/connection.php";
+require_once "includes/DB/connection.php";
 
 $ratings = [];
 

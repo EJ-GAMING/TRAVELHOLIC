@@ -1,5 +1,5 @@
 <?php
-include_once 'connection.php';
+include_once 'DB/connection.php';
 
 
 $tsm_id = mysqli_real_escape_string($conn, $_SESSION['tsm_id']);

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once 'connection.php';
+include_once 'DB/connection.php';
 if (!isset($_SESSION['tsm_id']) || trim($_SESSION['tsm_id']) == '') {
     $_SESSION['status'] = "Book First To Access that page."."<strong>"."THANK YOU!"."</strong>";
     header("location: ../index.php");

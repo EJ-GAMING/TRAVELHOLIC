@@ -1,6 +1,6 @@
 <?php
 
-include_once 'includes/connection.php';
+include_once 'includes/DB/connection.php';
 
 $query = "SELECT *
 FROM tbl_ts_manager

@@ -2,7 +2,7 @@
     <?php
     session_start();
     
-        include_once 'includes/connection.php';
+        include_once 'includes/DB/connection.php';
         $tsinfo_id = $_GET['ts_id'];
         $query = "SELECT *
         FROM tbl_ts_manager
