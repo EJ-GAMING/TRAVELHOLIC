@@ -38,7 +38,7 @@
     <script src="js/instascan.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/bootstrap.grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/bootstrap.reboot.min.css">
     <link rel="stylesheet" href="css/tsinfo.css"/>
     <link rel="stylesheet" href="css/rate.css">

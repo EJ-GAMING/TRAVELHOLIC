@@ -29,7 +29,7 @@ session_start();
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/bootstrap.reboot.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript"> 
