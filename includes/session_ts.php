@@ -21,7 +21,7 @@ if (isset($_POST['next'])) {
             header("location: ../step-2.php");
         }
         else {
-            $_SESSION['com'] = $total;
+            $_SESSION['comp'] = $total;
             header("location: ../step-3.php");
         }
     }else {

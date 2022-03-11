@@ -18,7 +18,7 @@ if( isset($_POST['next'])){
 	if($today > $book_date){
 		$_SESSION['status'] = "Date Invalid Please Select Another";
         header("location: ../step-1.php");
-	}elseif ($today > $book_out) {
+	}elseif ($book_date > $book_out) {
 		$_SESSION['status'] = "Date Invalid Please Select Another";
         header("location: ../step-1.php");
 	}
