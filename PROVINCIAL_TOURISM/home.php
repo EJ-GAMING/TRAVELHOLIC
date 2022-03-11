@@ -17,6 +17,7 @@ include_once 'includes/REQUEST/request.php';
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <?php include_once 'disable_right_click.php'; ?>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
 
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
