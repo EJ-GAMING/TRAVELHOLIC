@@ -1,4 +1,5 @@
 <?php include_once 'includes/session.php';
+//comment
 
 include_once 'includes/REQUEST/request.php';
 ?>
