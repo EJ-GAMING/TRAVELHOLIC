@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'includes/connection.php';
+include '../includes/DB/connection.php';
 
 if(isset($_SESSION['pt']))
 {

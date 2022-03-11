@@ -1,5 +1,5 @@
 <?php
-include_once 'includes/connection.php';
+include_once 'includes/DB/connection.php';
 
 session_start();//start session if session not start
 

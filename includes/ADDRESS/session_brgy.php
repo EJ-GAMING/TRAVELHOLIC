@@ -1,5 +1,5 @@
 <?php
-include_once '../connection.php';
+include_once '../DB/connection.php';
 
 $output3 = '';
 $cityID = mysqli_real_escape_string($conn, $_POST['cityID']);
