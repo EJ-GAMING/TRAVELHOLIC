@@ -22,6 +22,8 @@ if (isset($_POST['btn_login'])) {
                     WHERE uname = '$username' and pass = '$pass' limit 1";
         $login_result = mysqli_query($conn, $login_query);
         $row = mysqli_fetch_assoc($login_result);
+
+        echo json_encode($row);
         $email = $row['uname'];
         $passw = $row['pass'];
 
