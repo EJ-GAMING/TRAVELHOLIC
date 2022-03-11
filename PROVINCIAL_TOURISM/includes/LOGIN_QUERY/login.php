@@ -24,7 +24,7 @@ if (isset($_POST['btn_login'])) {
         $row = mysqli_fetch_assoc($login_result);
 
         if ($row === null) {
-            $_SESSION['status'] = json_encode($row);
+            $_SESSION['status'] = "Invalid Username Or Password";
             header("location: ../../index.php");
         }
         else {
