@@ -25,7 +25,7 @@ $rowcount =  mysqli_num_rows($result);
     <title>TRAVELHOLIC: Online Tourist Booking</title>
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/bootstrap.grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/bootstrap.reboot.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript"> 
@@ -244,9 +244,9 @@ if ($i == 1) {?>
 
     <?php include_once 'footer.php'; ?>
     
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
     
 </body>
