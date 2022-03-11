@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once '../connection.php';
+include_once '../../../includes/DB/connection.php';
 
 if (isset($_POST['next'])) {
 

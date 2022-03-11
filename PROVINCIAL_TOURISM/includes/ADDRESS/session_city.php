@@ -1,5 +1,5 @@
 <?php
-include_once '../session.php';
+include_once '../../../includes/DB/connection.php';
 
 $output2 = '';
 $provinceID = mysqli_real_escape_string($conn, $_POST['provinceID']);
