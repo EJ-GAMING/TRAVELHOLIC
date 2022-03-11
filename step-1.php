@@ -17,7 +17,7 @@ session_start();
         $result = mysqli_query($conn, $query);
        $row = mysqli_fetch_assoc($result);
 
-        if (isset($_SESSION['tsm_id'])){
+        if (isset($_SESSION['tsm'])){
 
         ?> 
 
