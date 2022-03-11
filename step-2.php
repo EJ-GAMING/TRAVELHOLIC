@@ -52,27 +52,27 @@ document.onclick=reEnable
                     <div class="card-body ">
                     <div class="row mb-2">
                             <div class="col-md">
-                                <a href="step-1.php?tsm_id=<?php echo $row['tsm_id'] ?>" class="btn btn-flat"><i class="fa fa-arrow-left fa-lg"></i></a>
+                                <a href="step-1.php?tsm_id=<?= $row['tsm_id'] ?>" class="btn btn-flat"><i class="fa fa-arrow-left fa-lg"></i></a>
                             </div>
                         </div>
                         <div class="row justify-content-center mb-3">
                             <div class="col-md-6">
                                 <Label>Tourist Spot You Booked</Label>
-                                <input type="hidden" class="form-control" name="tsm_id" value="<?php echo $row['tsm_id']?>" readonly>
+                                <input type="hidden" class="form-control" name="tsm_id" value="<?= $row['tsm_id']?>" readonly>
 
-                                <input type="text" class="form-control" name="tsinfo_id" value="<?php echo $row['ts_name']?>" readonly>
+                                <input type="text" class="form-control" name="tsinfo_id" value="<?= $row['ts_name']?>" readonly>
                             </div>
                         </div>
                         <div class="row justify-content-center mb-3">
                             <div class="col-md-6">
                                 <label>Date of Booking And Cheack Out</label>
-                               <input type="text" name="book_date"  value="<?php echo $_SESSION['b_date'] ?> to <?php echo $_SESSION['b_out'] ?>" class="form-control" readonly>
+                               <input type="text" name="book_date"  value="<?= $_SESSION['b_date'] ?> to <?= $_SESSION['b_out'] ?>" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="row justify-content-center mb-3">
                             <div class="col-md-6">
                                 <label>Available Slot On That Date</label>
-                               <input type="number" name="available_slot" min="1" class="form-control" value="<?php echo $_SESSION['total']?>" readonly>
+                               <input type="number" name="available_slot" min="1" class="form-control" value="<?= $_SESSION['total']?>" readonly>
                             </div>
                         </div>
                         <div class="row justify-content-center mb-3">

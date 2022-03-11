@@ -70,13 +70,13 @@ document.onclick=reEnable
                         <div class="row mb-2">
                            
                             <div class="col-md">
-                                <a href="ts_info.php?ts_id=<?php echo $row['tsinfo_id'] ?>" class="btn btn-flat"><i class="fa fa-arrow-left fa-lg"></i></a>
+                                <a href="ts_info.php?ts_id=<?= $row['tsinfo_id'] ?>" class="btn btn-flat"><i class="fa fa-arrow-left fa-lg"></i></a>
                             </div>
                         </div>
                         <div class="row justify-content-center mb-3">
                             <div class="col-md-6">
-                                <input type="hidden" name="ts_id" value="<?php echo $row['tsm_id'] ?>">
-                                <h1 class="text-dark"><?php echo $row['ts_name'];?></h1>
+                                <input type="hidden" name="ts_id" value="<?= $row['tsm_id'] ?>">
+                                <h1 class="text-dark"><?= $row['ts_name'];?></h1>
                             </div>
                         </div>
                     

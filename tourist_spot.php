@@ -78,7 +78,7 @@ function selectRating($tsm_id, $conn)
             }
         </script>
     </head>
-    <title>Document</title>
+    <title>Travelholic: Online Tourist Booking</title>
 </head>
 
 <body class="bg-light">
