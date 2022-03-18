@@ -13,8 +13,8 @@
           <div class="row">
             
               <div class="col-md-12">
-              <input type="hidden" name="tsinfo_id" class="form-control" value="<?php echo $row['tsinfo_id'];?>">
-                  <input type="hidden" name="tsm_id" class="form-control" value="<?php echo $row['tsm_id'];?>">
+              <input type="hidden" name="tsinfo_id" class="form-control" value="<?= $tsinfo_id?>">
+                  <input type="hidden" name="tsm_id" class="form-control" value="<?= $location_info['tsm_id']?>">
                   <div class="row d-flex justify-content-center">
                     <div class="col-md-12">
                         <label class="h3 d-flex justify-content-center">Please Scan Your QR Code to Generate your Booking ID</label>

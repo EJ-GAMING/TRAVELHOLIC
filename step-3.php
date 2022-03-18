@@ -3,7 +3,7 @@ include_once 'includes/DB/connection.php';
 
 session_start();//start session if session not start
 
-if(isset($_SESSION['comp'])){
+if(isset($_SESSION['com'])){
     $tsm_id = $_SESSION['tsm_id'];
     $query = "SELECT *
     FROM tbl_ts_manager

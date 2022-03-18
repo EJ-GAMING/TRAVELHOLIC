@@ -17,7 +17,7 @@ if(isset($_POST['rating'])){
     }else {
            
     $bookers_query = mysqli_query($conn, "SELECT * FROM tbl_tourist_info where tracker = '$book_id' AND tsm_id = '$tsm_id' AND (status = 'Arrived'OR status = 'Out')");
-    if (mysqli_num_rows($bookers_query) === 1) {
+    if (mysqli_num_rows($bookers_query) >= 1) {
         $rate_query = "INSERT INTO tbl_rating (rate, tsm_id, booker_id) VALUES ('$rate', '$tsm_id', '$book_id')";
         $rate_result = mysqli_query($conn, $rate_query);
         $_SESSION['status'] = "Successfully Rate";

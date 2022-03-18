@@ -39,11 +39,7 @@
 									<?php include 'includes/msg.php'; ?>
 								</div>
 							</div>
-              <div class="row">
-                <div class="col-md">
-                  <a href="" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#scan">Scan QRCode</a>
-                </div>
-              </div>          
+                    
               <table id="datatablesSimple" class="table table-bordered table-striped">
     <thead class="bg-success text-white">
 

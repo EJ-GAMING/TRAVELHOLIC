@@ -5,6 +5,8 @@ session_start();
        
         
         $tsm_id = $_SESSION['tsm'];
+        
+        if (isset($_SESSION['tsm'])){
         $query = "SELECT *
         FROM tbl_ts_manager
         
@@ -17,7 +19,6 @@ session_start();
         $result = mysqli_query($conn, $query);
        $row = mysqli_fetch_assoc($result);
 
-        if (isset($_SESSION['tsm'])){
 
         ?> 
 
