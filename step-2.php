@@ -65,8 +65,14 @@ document.onclick=reEnable
                         </div>
                         <div class="row justify-content-center mb-3">
                             <div class="col-md-6">
-                                <label>Date of Booking And Cheack Out</label>
-                               <input type="text" name="book_date"  value="<?= $_SESSION['b_date'] ?> to <?= $_SESSION['b_out'] ?>" class="form-control" readonly>
+                                <label>Date of Booking</label>
+                               <input type="text" name="book_date"  value="<?= $_SESSION['b_date'] ?>" class="form-control" readonly>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-3">
+                            <div class="col-md-6">
+                                <label>Date of Check Out</label>
+                               <input type="text" name="book_out"  value="<?= $_SESSION['b_out'] ?>" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="row justify-content-center mb-3">
