@@ -2,6 +2,7 @@
 session_start();
 require_once 'includes/DB/connection.php';
 $tsinfo_id = $_GET['ts_id'];
+if (isset($tsinfo_id)) {
 
 $query = mysqli_query($conn, "SELECT *
 FROM tbl_ts_manager
@@ -24,7 +25,7 @@ if (!$query) {
   $tourist_spot = mysqli_fetch_assoc($query);
 }
 
-if (isset($tsinfo_id)) {
+
 
 
   $id = $tsinfo_id;
