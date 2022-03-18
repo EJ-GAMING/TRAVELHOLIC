@@ -4,9 +4,10 @@ session_start();
         include_once 'includes/DB/connection.php';
        
         
-        $tsm_id = $_SESSION['tsm'];
+       
         
         if (isset($_SESSION['tsm'])){
+            $tsm_id = $_SESSION['tsm'];
         $query = "SELECT *
         FROM tbl_ts_manager
         
